@@ -26,7 +26,7 @@ public class DeptController {
 
     @DeleteMapping("/depts")
     //前端传递的请求参数名与服务器端方法形参一致
-    public Result delete(Integer id){
+    public Result delete(@RequestParam Integer id){
         System.out.println("根据id删除部门" + id);
         deptService.deleteById(id);
         return Result.success();
@@ -39,4 +39,10 @@ public class DeptController {
         return Result.success();
     }
 
+    @GetMapping("/depts/{id}")
+    public Result getInfo(@PathVariable Integer id){
+        System.out.println("根据ID查询部门" + id);
+        Dept dept = deptService.getById(id);
+        return Result.success(dept);
+    }
 }
