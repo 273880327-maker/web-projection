@@ -3,7 +3,6 @@ package com.example.controller;
 import com.example.pojo.Dept;
 import com.example.pojo.Result;
 import com.example.service.DeptService;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,5 +43,12 @@ public class DeptController {
         System.out.println("根据ID查询部门" + id);
         Dept dept = deptService.getById(id);
         return Result.success(dept);
+    }
+
+    @PutMapping("/depts")
+    public Result update(@RequestBody Dept dept){
+        System.out.println("更新部门信息" + dept);
+        deptService.update(dept);
+        return Result.success();
     }
 }
