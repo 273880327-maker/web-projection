@@ -3,9 +3,9 @@ package com.example.controller;
 import com.example.pojo.Dept;
 import com.example.pojo.Result;
 import com.example.service.DeptService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,10 +16,27 @@ public class DeptController {
     @Autowired
     private DeptService deptService;
 
-    @RequestMapping("/depts")
-    public Result list(){
+    @GetMapping("/depts")
+    public Result list() {
         System.out.println("查询全部的部门数据");
         List<Dept> deptlist = deptService.findAll();
         return Result.success(deptlist);
     }
+
+
+    @DeleteMapping("/depts")
+    //前端传递的请求参数名与服务器端方法形参一致
+    public Result delete(Integer id){
+        System.out.println("根据id删除部门" + id);
+        deptService.deleteById(id);
+        return Result.success();
+    }
+
+    @PostMapping("/depts")
+    public Result add(@RequestBody Dept dept){
+        System.out.println("新增部门" + dept);
+        deptService.add(dept);
+        return Result.success();
+    }
+
 }
