@@ -1,0 +1,18 @@
+2026-10-03 11:30:22.517 [main] INFO  com.example.TilasWebApplication - Starting TilasWebApplication using Java 17.0.20.1 with PID 23880 (D:\Intellij_program\web-project\tilas-web\target\classes started by user in D:\Intellij_program\web-project)
+2026-10-03 11:30:22.519 [main] DEBUG com.example.TilasWebApplication - Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-03 11:30:22.519 [main] INFO  com.example.TilasWebApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-03 11:30:22.942 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2026-10-03 11:30:22.943 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.example'
+2026-10-03 11:30:23.024 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\Intellij_program\web-project\tilas-web\target\classes\com\example\mapper\DeptMapper.class]
+2026-10-03 11:30:23.024 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\Intellij_program\web-project\tilas-web\target\classes\com\example\mapper\EmpExprMapper.class]
+2026-10-03 11:30:23.024 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\Intellij_program\web-project\tilas-web\target\classes\com\example\mapper\EmpMapper.class]
+2026-10-03 11:30:23.025 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'deptMapper' and 'com.example.mapper.DeptMapper' mapperInterface
+2026-10-03 11:30:23.027 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'empExprMapper' and 'com.example.mapper.EmpExprMapper' mapperInterface
+2026-10-03 11:30:23.027 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'empMapper' and 'com.example.mapper.EmpMapper' mapperInterface
+2026-10-03 11:30:23.372 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-03 11:30:23.373 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-03 11:30:23.373 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-03 11:30:23.558 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified.
+2026-10-03 11:30:23.767 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2026-10-03 11:30:23.802 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-03 11:30:23.825 [main] INFO  com.example.TilasWebApplication - Started TilasWebApplication in 1.87 seconds (process running for 2.27)
