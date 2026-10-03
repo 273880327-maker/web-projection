@@ -17,14 +17,44 @@
             <if test="deptId != null">
                 and e.dept_id = #{deptId}
             </if>
-            <if test="entryTimeStart != null">
-                and e.entry_time >= #{entryTimeStart}
+            <if test="entryDateStart != null">
+                and e.entry_date >= #{entryDateStart}
             </if>
-            <if test="entryTimeEnd != null">
-                and e.entry_time <= #{entryTimeEnd}
+            <if test="entryDateEnd != null">
+                and e.entry_date <= #{entryDateEnd}
             </if>
         </where>
         order by e.update_time desc
     </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into emp (
+            <if test="username != null">username,</if>
+            <if test="password != null">password,</if>
+            <if test="name != null">name,</if>
+            <if test="gender != null">gender,</if>
+            <if test="phone != null">phone,</if>
+            <if test="job != null">job,</if>
+            <if test="salary != null">salary,</if>
+            <if test="image != null">image,</if>
+            <if test="deptId != null">dept_id,</if>
+            <if test="entryDate != null">entry_date,</if>
+            create_time,
+            update_time
+        ) values (
+            <if test="username != null">#{username},</if>
+            <if test="password != null">#{password},</if>
+            <if test="name != null">#{name},</if>
+            <if test="gender != null">#{gender},</if>
+            <if test="phone != null">#{phone},</if>
+            <if test="job != null">#{job},</if>
+            <if test="salary != null">#{salary},</if>
+            <if test="image != null">#{image},</if>
+            <if test="deptId != null">#{deptId},</if>
+            <if test="entryDate != null">#{entryDate},</if>
+            now(),
+            now()
+        )
+    </insert>
 
 </mapper>

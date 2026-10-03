@@ -5,6 +5,7 @@ import com.example.pojo.PageResult;
 
 public interface EmpService {
 
+    PageResult<Emp> page(Integer page, Integer pageSize, Emp emp);
 
-    PageResult<Emp> page(Integer page, Integer pageSize);
+    void add(Emp emp);
 }

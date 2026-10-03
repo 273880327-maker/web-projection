@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 public class Emp {
@@ -18,6 +19,10 @@ public class Emp {
     private String image;
     private LocalDateTime createTime;
     private Integer deptId;
+    private String deptName;
     private LocalDateTime updateTime;
-    private LocalDate entryTime;
+    private LocalDate entryDate;
+    private LocalDate entryDateStart;
+    private LocalDate entryDateEnd;
+    private List<EmpExpr> exprList;
 }
