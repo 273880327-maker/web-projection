@@ -21,7 +21,7 @@
                 and e.entry_date >= #{entryDateStart}
             </if>
             <if test="entryDateEnd != null">
-                and e.entry_date <= #{entryDateEnd}
+                and e.entry_date &lt;= #{entryDateEnd}
             </if>
         </where>
         order by e.update_time desc

@@ -1,7 +1,7 @@
 com\example\mapper\DeptMapper.class
-com\example\TilasWebApplication.class
-com\example\service\DeptService.class
 com\example\service\impl\DeptServiceImpl.class
-com\example\pojo\Result.class
 com\example\controller\DeptController.class
 com\example\pojo\Dept.class
+com\example\TilasWebApplication.class
+com\example\service\DeptService.class
+com\example\pojo\Result.class
