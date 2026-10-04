@@ -46,4 +46,27 @@ public class EmpServiceImpl implements EmpService {
             }
         }
     }
+
+    @Override
+    @Transactional
+    public void update(Emp emp) {
+        empMapper.updateById(emp);
+
+        empExprMapper.deleteByEmpId(emp.getId());
+
+        List<EmpExpr> exprList = emp.getExprList();
+        if (exprList != null && !exprList.isEmpty()) {
+            for (EmpExpr expr : exprList) {
+                expr.setEmpId(emp.getId());
+                empExprMapper.insert(expr);
+            }
+        }
+    }
+
+    @Override
+    @Transactional
+    public void delete(Integer id) {
+        empExprMapper.deleteByEmpId(id);
+        empMapper.deleteById(id);
+    }
 }

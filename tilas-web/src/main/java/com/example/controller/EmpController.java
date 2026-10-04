@@ -32,4 +32,18 @@ public class EmpController {
         return Result.success();
     }
 
+    @PutMapping
+    public Result update(@RequestBody Emp emp) {
+        log.info("修改员工： {}", emp);
+        empService.update(emp);
+        return Result.success();
+    }
+
+    @DeleteMapping
+    public Result delete(@RequestParam Integer id) {
+        log.info("删除员工： id={}", id);
+        empService.delete(id);
+        return Result.success();
+    }
+
 }

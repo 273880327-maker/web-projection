@@ -57,4 +57,26 @@
         )
     </insert>
 
+    <update id="updateById">
+        update emp
+        <set>
+            <if test="username != null">username = #{username},</if>
+            <if test="password != null">password = #{password},</if>
+            <if test="name != null">name = #{name},</if>
+            <if test="gender != null">gender = #{gender},</if>
+            <if test="phone != null">phone = #{phone},</if>
+            <if test="job != null">job = #{job},</if>
+            <if test="salary != null">salary = #{salary},</if>
+            <if test="image != null">image = #{image},</if>
+            <if test="deptId != null">dept_id = #{deptId},</if>
+            <if test="entryDate != null">entry_date = #{entryDate},</if>
+            update_time = now()
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        delete from emp where id = #{id}
+    </delete>
+
 </mapper>

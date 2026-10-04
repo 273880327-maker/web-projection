@@ -9,4 +9,6 @@ public interface EmpExprMapper {
 
     void insert(EmpExpr empExpr);
 
+    void deleteByEmpId(Integer empId);
+
 }

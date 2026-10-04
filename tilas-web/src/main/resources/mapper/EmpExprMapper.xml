@@ -9,4 +9,8 @@
         values (#{empId}, #{begin}, #{end}, #{company}, #{job})
     </insert>
 
+    <delete id="deleteByEmpId">
+        delete from emp_expr where emp_id = #{empId}
+    </delete>
+
 </mapper>

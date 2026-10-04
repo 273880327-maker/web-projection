@@ -8,4 +8,8 @@ public interface EmpService {
     PageResult<Emp> page(Integer page, Integer pageSize, Emp emp);
 
     void add(Emp emp);
+
+    void update(Emp emp);
+
+    void delete(Integer id);
 }

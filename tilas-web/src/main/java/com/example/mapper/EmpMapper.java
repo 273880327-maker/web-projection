@@ -13,4 +13,8 @@ public interface EmpMapper {
 
     void insert(Emp emp);
 
+    void updateById(Emp emp);
+
+    void deleteById(Integer id);
+
 }
